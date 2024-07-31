@@ -11,7 +11,6 @@
 		<required-maven-version>3.3.1</required-maven-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.version>5.10.2</junit.version>
-		<antlr.version>4.13.1</antlr.version>
 	</properties>
 	<developers>
 		<developer>
@@ -47,58 +46,58 @@
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>antlr4-runtime</artifactId>
-			<version>${antlr.version}</version>
+			<version>4.13.1</version>
 		</dependency>
 	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.antlr</groupId>
-				<artifactId>antlr4-maven-plugin</artifactId>
-				<version>${antlr.version}</version>
-				<configuration>
-					<visitor>true</visitor>
-					<listener>true</listener>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>antlr4</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
-				<configuration>
-					<source>${target.jvm}</source>
-					<target>${target.jvm}</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.4.1</version>
-				<executions>
-					<execution>
-						<id>enforce-maven</id>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
-						<configuration>
-							<rules>
-								<requireMavenVersion>
-									<version>${required-maven-version}</version>
-								</requireMavenVersion>
-							</rules>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+<!--	<build>-->
+<!--		<plugins>-->
+<!--			<plugin>-->
+<!--				<groupId>org.antlr</groupId>-->
+<!--				<artifactId>antlr4-maven-plugin</artifactId>-->
+<!--				<version>${antlr.version}</version>-->
+<!--				<configuration>-->
+<!--					<visitor>true</visitor>-->
+<!--					<listener>true</listener>-->
+<!--				</configuration>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<goals>-->
+<!--							<goal>antlr4</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-compiler-plugin</artifactId>-->
+<!--				<version>3.13.0</version>-->
+<!--				<configuration>-->
+<!--					<source>${target.jvm}</source>-->
+<!--					<target>${target.jvm}</target>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-enforcer-plugin</artifactId>-->
+<!--				<version>3.4.1</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>enforce-maven</id>-->
+<!--						<goals>-->
+<!--							<goal>enforce</goal>-->
+<!--						</goals>-->
+<!--						<configuration>-->
+<!--							<rules>-->
+<!--								<requireMavenVersion>-->
+<!--									<version>${required-maven-version}</version>-->
+<!--								</requireMavenVersion>-->
+<!--							</rules>-->
+<!--						</configuration>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
+<!--		</plugins>-->
+<!--	</build>-->
 <!--	<profiles>-->
 <!--		<profile>-->
 <!--			<id>deploy</id>-->

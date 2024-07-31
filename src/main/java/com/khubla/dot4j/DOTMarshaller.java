@@ -2,11 +2,14 @@ package com.khubla.dot4j;
 
 import java.io.*;
 
-import org.antlr.v4.runtime.*;
 
 import com.khubla.dot.*;
 import com.khubla.dot4j.domain.*;
 import com.khubla.dot4j.listener.*;
+import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.Lexer;
+import org.antlr.v4.runtime.TokenStream;
 
 public class DOTMarshaller {
 	public static void exportGraph(Graph graph, OutputStream outputStream) throws IOException {

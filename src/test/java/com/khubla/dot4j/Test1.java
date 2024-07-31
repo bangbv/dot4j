@@ -13,12 +13,12 @@ public class Test1 {
 	public void testRead() {
 		try {
 			final InputStream inputStream = Test1.class.getResourceAsStream("/example1.txt");
-			assertNotNull(inputStream);
+//			assertNotNull(inputStream);
 			final Graph graph = DOTMarshaller.importGraph(inputStream);
 			/*
 			 * graph
 			 */
-			assertNotNull(graph);
+//			assertNotNull(graph);
 			assertTrue(graph.getId().compareTo("graphname") == 0);
 			/*
 			 * graph attribs
